@@ -1,0 +1,22 @@
+{
+  "name": "ecs-deploymeny",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SCGWEDOtech/gitops-aws-ecs-poc.git"
+  },
+  "author": "Amarit Jarasjindarat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SCGWEDOtech/gitops-aws-ecs-poc/issues"
+  },
+  "homepage": "https://github.com/SCGWEDOtech/gitops-aws-ecs-poc#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

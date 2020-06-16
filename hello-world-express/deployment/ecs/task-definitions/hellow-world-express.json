@@ -1,0 +1,25 @@
+{
+    "family": "do-devops-hello-world-express",
+    "executionRoleArn": "arn:aws:iam::975086324241:role/ecsTaskExecutionRole",
+    "taskRoleArn": "arn:aws:iam::975086324241:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+        {
+            "name": "do-devops-hello-world-express",
+            "image": "975086324241.dkr.ecr.ap-southeast-1.amazonaws.com/do-devops-hello-world-express:latest",
+            "portMappings": [
+                {
+                    "containerPort": 5000,
+                    "hostPort": 5000,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512"
+}
