@@ -55,7 +55,7 @@ aws ecs update-service --cluster <cluster> --service <service> \
 ```sh
 # find a service
 export CLUSTER=`aws ecs list-clusters | jq -r '.clusterArns[]' | fzf`
-export SERVICE=`aws ecs list-services --cluster $CLUSTER
+export SERVICE=`aws ecs list-services --cluster $CLUSTER \
     | jq -r '.serviceArns[]' | fzf`
 
 # describe a task definition
@@ -79,5 +79,5 @@ export TASK_DEFINITION_NEW=`
 
 # update a service to use new task definition
 aws ecs update-service --cluster $CLUSTER --service $SERVICE \
-    --task-definition $TASK-DEFINITION_NEW
+    --task-definition $TASK_DEFINITION_NEW
 ```
