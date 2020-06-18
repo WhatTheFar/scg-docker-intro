@@ -65,7 +65,7 @@ aws ecs describe-task-definition --task-definition $TASK_DEFINITION \
     > task-definition.json
 
 # edit a task definition to use new containers
-CONTAINER_NAME=gitops-ecs-dev-app1
+CONTAINER_NAME=do-devops-hello-world-express
 cat task-definition.json \
     | jq "(.containerDefinitions[] | select(.name == \"$CONTAINER_NAME\") | .image) |= \"$IMAGE_NAME\"" \
     | jq 'del(.taskDefinitionArn, .revision, .status, .requiresAttributes, .compatibilities)' \
